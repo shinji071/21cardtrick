@@ -5,7 +5,7 @@ def displayArray(a):
         s1 = '{:<6d}'.format(a[i-1])
         s2 = '{:<6d}'.format(a[i+7-1])
         s3 = '{:<6d}'.format(a[i+14-1])
-        st.write(s1+s2+s3)
+        st.write(s1)
 
 st.header('21 Card Trick')
 st.write('21 Card Trickと呼ばれる古典カードマジックのオンライン版。指示に従って入力してみてください。')
