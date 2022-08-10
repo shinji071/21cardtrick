@@ -1,22 +1,23 @@
 import streamlit as st
 question = "何列目にあるか教えてください："
 def displayArray(a):
+    st.write("{0}\t\t{1}\t\t{2}\n".format("１列目","２列目","３列目")
     for i in range(1,8):
         st.write("{0}\t\t{1}\t\t{2}\n".format(a[i-1],a[i+7-1],a[i+14-1]))
 
 st.header('21 Card Trick')
 st.write('21 Card Trickと呼ばれる古典カードマジックのオンライン版。指示に従って入力してみてください。')
-st.write('列というのは、左から１列目、２列目、３列目と数えます(開発者twitter:@ShinjiEdu)')
+st.write('列は、左から１列目、２列目、３列目と数えます(開発者twitter:@ShinjiEdu)')
 
 
 a = [i+1 for i in range(21)]
 b = [0 for i in range(21)]
 c =  [0 for i in range(21)]
 displayArray(a);
-st.write("数字を一つ覚えてください！")
+st.write("↑から数字を一つ覚えて、下の指示に従ってください！")
 option = st.selectbox(
      '↑何列目にあなたの数字はありますか？',
-     ('-', '1列目', '2列目', '3列目'))
+     ('-', '1列目', '2列目', '3列目'), key="0")
 
 if option == '1列目':
     b[0]=a[7]; b[7]=a[8]; b[14]=a[9];
@@ -29,7 +30,7 @@ if option == '1列目':
     displayArray(b);
     option1 = st.selectbox(
      '↑何列目にあなたの数字はありますか？',
-     ('-', '1列目', '2列目', '3列目'))
+     ('-', '1列目', '2列目', '3列目'),key="1")
     if option1 == '1列目':
         c[0]=b[7]; c[7]=b[8]; c[14]=b[9];
         c[1]=b[10]; c[8]=b[11]; c[15]=b[12];
@@ -41,7 +42,7 @@ if option == '1列目':
         displayArray(c);
         option11 = st.selectbox(
          '↑何列目にあなたの数字はありますか？',
-         ('-', '1列目', '2列目', '3列目'))
+         ('-', '1列目', '2列目', '3列目'),key="11")
         if option11 == '1列目':
             st.subheader("あなたの数字は{0}です！".format(c[3]))
         elif option11 == '2列目':
@@ -59,7 +60,7 @@ if option == '1列目':
         displayArray(c);
         option12 = st.selectbox(
          '↑何列目にあなたの数字はありますか？',
-         ('-', '1列目', '2列目', '3列目'))
+         ('-', '1列目', '2列目', '3列目'),key="12")
         if option12 == '1列目':
             st.subheader("あなたの数字は{0}です！".format(c[3]))
         elif option12 == '2列目':
@@ -77,7 +78,7 @@ if option == '1列目':
         displayArray(c);
         option13 = st.selectbox(
          '↑何列目にあなたの数字はありますか？',
-         ('-', '1列目', '2列目', '3列目'))
+         ('-', '1列目', '2列目', '3列目'),key="13")
         if option13 == '1列目':
             st.subheader("あなたの数字は{0}です！".format(c[3]))
         elif option13 == '2列目':
@@ -95,7 +96,7 @@ elif option == '2列目':
     displayArray(b);
     option2 = st.selectbox(
      '↑何列目にあなたの数字はありますか？',
-     ('-', '1列目', '2列目', '3列目'))
+     ('-', '1列目', '2列目', '3列目'),key="2")
     if option2 == '1列目':
         c[0]=b[7]; c[7]=b[8]; c[14]=b[9];
         c[1]=b[10]; c[8]=b[11]; c[15]=b[12];
@@ -107,7 +108,7 @@ elif option == '2列目':
         displayArray(c);
         option21 = st.selectbox(
          '↑何列目にあなたの数字はありますか？',
-         ('-', '1列目', '2列目', '3列目'))
+         ('-', '1列目', '2列目', '3列目'),key="21")
         if option21 == '1列目':
             st.subheader("あなたの数字は{0}です！".format(c[3]))
         elif option21 == '2列目':
@@ -125,7 +126,7 @@ elif option == '2列目':
         displayArray(c);
         option22 = st.selectbox(
          '↑何列目にあなたの数字はありますか？',
-         ('-', '1列目', '2列目', '3列目'))
+         ('-', '1列目', '2列目', '3列目'),key="22")
         if option22 == '1列目':
             st.subheader("あなたの数字は{0}です！".format(c[3]))
         elif option22 == '2列目':
@@ -143,7 +144,7 @@ elif option == '2列目':
         displayArray(c);
         option23 = st.selectbox(
          '↑何列目にあなたの数字はありますか？',
-         ('-', '1列目', '2列目', '3列目'))
+         ('-', '1列目', '2列目', '3列目'),key="23")
         if option23 == '1列目':
             st.subheader("あなたの数字は{0}です！".format(c[3]))
         elif option23 == '2列目':
@@ -161,7 +162,7 @@ elif option == '3列目':
     displayArray(b);
     option3 = st.selectbox(
      '↑何列目にあなたの数字はありますか？',
-     ('-', '1列目', '2列目', '3列目'))
+     ('-', '1列目', '2列目', '3列目'),key="3")
     if option3 == '1列目':
         c[0]=b[7]; c[7]=b[8]; c[14]=b[9];
         c[1]=b[10]; c[8]=b[11]; c[15]=b[12];
@@ -173,7 +174,7 @@ elif option == '3列目':
         displayArray(c);
         option31 = st.selectbox(
          '↑何列目にあなたの数字はありますか？',
-         ('-', '1列目', '2列目', '3列目'))
+         ('-', '1列目', '2列目', '3列目'),key="31")
         if option31 == '1列目':
             st.subheader("あなたの数字は{0}です！".format(c[3]))
         elif option31 == '2列目':
@@ -191,7 +192,7 @@ elif option == '3列目':
         displayArray(c);
         option32 = st.selectbox(
          '↑何列目にあなたの数字はありますか？',
-         ('-', '1列目', '2列目', '3列目'))
+         ('-', '1列目', '2列目', '3列目'),key="32")
         if option32 == '1列目':
             st.subheader("あなたの数字は{0}です！".format(c[3]))
         elif option32 == '2列目':
@@ -209,7 +210,7 @@ elif option == '3列目':
         displayArray(c);
         option33 = st.selectbox(
          '↑何列目にあなたの数字はありますか？',
-         ('-', '1列目', '2列目', '3列目'))
+         ('-', '1列目', '2列目', '3列目'),key="key33")
         if option33 == '1列目':
             st.subheader("あなたの数字は{0}です！".format(c[3]))
         elif option33 == '2列目':
