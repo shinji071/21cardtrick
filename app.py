@@ -1,7 +1,7 @@
 import streamlit as st
 question = "何列目にあるか教えてください："
 def displayArray(a):
-    st.write("{0}\t\t{1}\t\t{2}\n".format("１列目","２列目","３列目")
+    st.write("{0}\t\t{1}\t\t{2}\n".format("１列目","２列目","３列目"))
     for i in range(1,8):
         st.write("{0}\t\t{1}\t\t{2}\n".format(a[i-1],a[i+7-1],a[i+14-1]))
 
