@@ -7,8 +7,9 @@ def displayArray(a):
         s3 = str(a[i+14-1]).ljust(6)
         st.text(s1.ljust(6) + s2.ljust(6) + s3.ljust(6))
 
-st.header('21 Card Trick')
-st.write('21 Card Trickと呼ばれる古典カードマジックのオンライン版。指示に従って入力してみてください。')
+st.header('21 Card Trick Online')
+st.write('21 Card Trickと呼ばれる古典カードマジックのオンライン版です。実際にはトランプを使って演じます。このアプリを使うと不思議さ半減です^^;（じゃあなぜ作った...）')
+st.write('トランプを使った方法を知りたい方はこちら：https://theory-of-magic.com/21-card-trick/')
 st.write('列は、左から１列目、２列目、３列目と数えます(開発者twitter:@ShinjiEdu)')
 
 
