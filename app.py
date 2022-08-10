@@ -2,7 +2,7 @@ import streamlit as st
 question = "何列目にあるか教えてください："
 def displayArray(a):
     for i in range(1,8):
-        st.write("{0}\t\t{1}\t\t{2}\n".format(a[i-1],a[i+7-1],a[i+14-1]))
+        st.write("{0}{1}{2}".format(a[i-1].ljust(6),a[i+7-1].ljust(6),a[i+14-1].ljust(6)))
 
 st.header('21 Card Trick')
 st.write('21 Card Trickと呼ばれる古典カードマジックのオンライン版。指示に従って入力してみてください。')
